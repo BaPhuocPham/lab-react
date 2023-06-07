@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.listTitle {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.films {
+  position: relative;
+}
+
+.films .switchThemeMode {
+  color: #5A616C;
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.films .switchThemeMode:hover {
+  color: white;
+}
+
+.filmContainer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: #18191a;
+}
+
+.popupContainer {
+  width: 100%;
+  background-color: #18191ace;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.popupContainer .popup {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 90px;
+  background-color: #242526;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  position: relative;
+  box-shadow: rgba(245, 244, 244, 0.35) 0px 5px 15px;
+}
+
+.popupContainer .popup .imageWrapper {
+  width: 50%;
+  margin-top: 40px;
+}
+
+.popupContainer .popup .imageWrapper img {
+  width: 40%;
+  height: 10%;  
+  object-position: center;
+  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.popupContainer .popup .filmDetails {
+  padding: 10px;
+  text-align: center;
+}
+
+.popupContainer .popup .filmTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #ffff;
+}
+
+.popupContainer .popup .filmYear {
+  font-size: 14px;
+  color: #ffff;
+}
+
+.popupContainer .popup .filmDescription {
+  font-size: 16px;
+  color: #909BA6;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  padding: 0px 60px;
+  text-align: left;
+}
+
+.popupContainer .popup .exitBtn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  color: #5A616C;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.popupContainer .popup .exitBtn:hover {
+  color: #ffff;
+}
