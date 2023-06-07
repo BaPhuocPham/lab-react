@@ -3,14 +3,13 @@ import { Film } from "../Film.js/Film";
 import { ListOfFilm } from "../../shared/ListOfFilm";
 import "./Films.css";
 
-export const Films = () => {
+export const Films = ({ isDarkMode, toogleSwitchTheme }) => {
   const [isOpenFilmDetail, setIsOpenFilmDetail] = useState(false)
   const [film, setFilm] = useState({})
 
   const showDetail = (film) => {
     setFilm(film)
     toogleOpenFilmDetail()
-    console.log(film)
   }
 
   const toogleOpenFilmDetail = () => {
@@ -19,17 +18,36 @@ export const Films = () => {
 
   return (
     <div className="films">
-      <p className="switchThemeMode">Switch to light mode</p>
-      <p className="listTitle">Movie list</p>
-      <div className="filmContainer">
+      <p 
+        className="switchThemeMode" 
+        onClick={toogleSwitchTheme}
+        style={!isDarkMode ? {
+          color: `#000000`,
+        } : {}}
+      >
+        Switch to light mode
+      </p>
+      <p 
+        className="listTitle"
+        style={!isDarkMode ? {
+          color: `#000000`,
+        } : {}}
+      >
+        Movie list
+      </p>
+      <div 
+        className="filmContainer"
+        style={!isDarkMode ? {
+          backgroundColor: `#ffffff`
+        } : {}}
+      >
         {ListOfFilm.map((film, index) => (
-          <Film key={index} film={film} showDetail={showDetail} />
+          <Film key={index} film={film} showDetail={showDetail} isDarkMode={isDarkMode} />
         ))}
       </div>
       { isOpenFilmDetail && (
         <div className="popupContainer">
           <div className="popup">
-            {console.log('Open Details')}
             <div className="imageWrapper">
               <img src={film.image} alt="pokemon" />
             </div>
