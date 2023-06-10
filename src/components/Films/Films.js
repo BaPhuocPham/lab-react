@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from 'react-router-dom';
 import { Film } from "../Film.js/Film";
 import { ListOfFilm } from "../../shared/ListOfFilm";
 import "./Films.css";
@@ -18,15 +19,27 @@ export const Films = ({ isDarkMode, toogleSwitchTheme }) => {
 
   return (
     <div className="films">
-      <p 
-        className="switchThemeMode" 
-        onClick={toogleSwitchTheme}
-        style={!isDarkMode ? {
-          color: `#000000`,
-        } : {}}
-      >
-        Switch to light mode
-      </p>
+      <div className="actionWrapper">
+        
+        <button className="contactBtn">
+          <NavLink 
+            className="navLink" 
+            to={`/contact`}
+            style={!isDarkMode ? {
+              color: `#000000`,
+            } : {}}
+          >Contact</NavLink>
+        </button>
+        <button 
+          className="switchThemeMode" 
+          onClick={toogleSwitchTheme}
+          style={!isDarkMode ? {
+            color: `#000000`,
+          } : {}}
+        >
+          {!isDarkMode ? 'Dark' : 'Light'}
+        </button>
+      </div>
       <p 
         className="listTitle"
         style={!isDarkMode ? {
@@ -49,11 +62,14 @@ export const Films = ({ isDarkMode, toogleSwitchTheme }) => {
         <div className="popupContainer">
           <div className="popup">
             <div className="imageWrapper">
-              <img src={film.image} alt="pokemon" />
+              <img src={film.image} alt="pokemon"></img>
             </div>
             <p className="filmTitle">{film.title}</p>
             <p className="filmDescription">{film.description}</p>          
-            <div className="exitBtn" onClick={toogleOpenFilmDetail}>X</div>
+            <div className="btnWrapper">
+              <div className="cancleBtn" onClick={toogleOpenFilmDetail}>Cancle</div>
+              <NavLink className="watchBtn" to={`/detail/${film.id}`}>Watch</NavLink>
+            </div>
           </div>
         </div>
       )}

@@ -4,7 +4,7 @@ import "./Film.css";
 export const Film = ({ film, showDetail, isDarkMode }) => {
   return (
     <div className="filmItem" style={!isDarkMode ? {
-      backgroundColor: `#ffffff`,
+      backgroundColor: `#f5f5f5`,
       color: `#000000`,
       boxShadow: `rgba(0, 0, 0, 0.35) 1px 5px 15px`
     } : {}}>

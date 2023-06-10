@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contactContainer {
+  width: 100%;
+  background-color: #18191a;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  padding: 50px 100px;
+}
+
+.contactContainer .contactInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.contactContainer .contactInfo span {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.contactContainer .contactInfo div {
+  margin-bottom: 10px;
+}
+
+.contactContainer .about {
+  width: 50%;
+  text-align: left;
+}
+
+.contactContainer .about h1 {
+  font-size: 24px;
+}
+
+.contactContainer .about p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #EAEAEA;
+}
