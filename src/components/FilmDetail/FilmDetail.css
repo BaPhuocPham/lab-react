@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.filmDetailContainer {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.filmDetailContainer h1 {
+  margin: 50px 0;
+  font-size: 42px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.filmDetailContainer .filmDetail {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  background-color: #242526;
+  border-radius: 7px;
+}
+
+.filmDetailContainer .filmDetail .filmImage {
+  width: 40%;
+  padding: 20px;
+}
+
+.filmDetailContainer .filmDetail .filmImage .imageWrapper {
+  width: 300px;
+  height: 300px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.filmDetailContainer .filmDetail .filmInfo {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 20px 0 20px;
+}
+
+.filmDetailContainer .filmDetail .imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 7px;
+}
+
+.filmDetailContainer .filmDetail .filmTitle {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 24px;
+} 
+
+.filmDetailContainer .filmDetail p:not(:first-child) {
+  margin-top: 10px;
+}
+
+.filmDetailContainer .filmDetail .filmDescription {
+  width: 80%;
+  text-align: left;
+}

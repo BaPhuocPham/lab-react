@@ -17,12 +17,32 @@
   position: relative;
 }
 
-.films .switchThemeMode {
-  color: #5A616C;
-  font-size: 18px;
+.films .actionWrapper {
   position: absolute;
   top: 10px;
   right: 30px;
+}
+
+.films .contactBtn {
+  font-size: 14px;
+  padding: 10px 10px;
+  border-radius: 7px;
+  background-color: green;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.films .contactBtn .navLink {
+  color: white;
+  text-decoration: none;
+}
+
+.films .switchThemeMode {
+  color: white;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 7px;
+  background-color: #3982e4;
   cursor: pointer;
 }
 
@@ -53,7 +73,9 @@
 .popupContainer .popup {
   width: 50%;
   margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 20px;
+  height: 550px;
+  overflow: auto;
   background-color: #242526;
   display: flex;
   flex-direction: column;
@@ -69,8 +91,8 @@
 }
 
 .popupContainer .popup .imageWrapper img {
-  width: 40%;
-  height: 10%;  
+  width: 200px;
+  height: 200px;  
   object-position: center;
   border-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -98,20 +120,33 @@
   font-size: 16px;
   color: #909BA6;
   margin-top: 50px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   padding: 0px 60px;
   text-align: left;
 }
 
-.popupContainer .popup .exitBtn {
-  position: absolute;
-  right: 30px;
-  top: 20px;
-  color: #5A616C;
-  font-size: 18px;
+.popupContainer .popup .btnWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  padding-right: 60px;
+}
+
+.popupContainer .popup .btnWrapper .cancleBtn {
+  padding: 10px 15px;
+  border-radius: 7px;
+  background-color: white;
+  color: black;
   cursor: pointer;
 }
 
-.popupContainer .popup .exitBtn:hover {
-  color: #ffff;
+.popupContainer .popup .btnWrapper .watchBtn {
+  margin-left: 20px;
+  padding: 10px 15px;
+  border-radius: 7px;
+  background-color: #036541;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
