@@ -20,17 +20,14 @@ export const Films = ({ isDarkMode, toogleSwitchTheme }) => {
   return (
     <div className="films">
       <div className="actionWrapper">
-        
-        <button className="contactBtn">
-          <NavLink 
-            className="navLink" 
-            to={`/contact`}
-            style={!isDarkMode ? {
-              color: `#000000`,
-            } : {}}
-          >Contact</NavLink>
-        </button>
-        <button 
+        <NavLink 
+          className="navLink" 
+          to={`/contact`}
+          style={!isDarkMode ? {
+            color: `#000000`,
+          } : {}}
+        >Contact</NavLink>
+        <div 
           className="switchThemeMode" 
           onClick={toogleSwitchTheme}
           style={!isDarkMode ? {
@@ -38,7 +35,7 @@ export const Films = ({ isDarkMode, toogleSwitchTheme }) => {
           } : {}}
         >
           {!isDarkMode ? 'Dark' : 'Light'}
-        </button>
+        </div>
       </div>
       <p 
         className="listTitle"
