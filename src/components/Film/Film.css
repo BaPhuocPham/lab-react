@@ -4,7 +4,8 @@
 }
 
 .filmItem {
-  width: 200px;
+  position: relative;
+  width: 100%;
   height: 350px;
   display: flex;
   flex-direction: column;
@@ -16,17 +17,10 @@
   transition: transform 0.1s ease;
   cursor: pointer;
   font-size: 14px;
-  color: #ffff;
 }
 
 .filmItem:hover {
   transform: scale(1.05);
-}
-
-.filmItem .imageWrapper {
-  width: 100%;
-  height: 60%;
-  margin: 10px 0px;
 }
 
 .filmItem .imageWrapper img {
@@ -42,21 +36,35 @@
   text-align: center;
 }
 
-.filmItem .filmTitle {
-  font-size: 16px;
-  font-weight: bold;
+.filmItem .card-title {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  display: flex !important;
+  justify-content: space-between !important;
   margin-bottom: 5px;
-  /* color: #ffff; */
+  color: black !important;
+}
+.card .card-image {
+  width: 100%;
+  height: 60%;
+  min-height: 60%;
 }
 
-/* .filmItem .filmYear {
+.card .card-image img {
+  object-position: center !important;
+  object-fit: cover !important;
+}
+
+.reveal .filmYear {
   font-size: 14px;
-  color: #ffff;
-} */
+  text-align: left;
+  color: black !important;
+}
 
 .filmItem .moreDetail {
   font-size: 14px;
-  /* color: #ffff; */
+  text-align: left;
   margin-top: 20px;
   text-decoration: underline;
   cursor: pointer;
@@ -64,4 +72,17 @@
 
 .filmItem .details:hover {
   color: yellowgreen;
+}
+
+.card-title .material-icons {
+  display: none;
+}
+
+.moreDetailsCard {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }

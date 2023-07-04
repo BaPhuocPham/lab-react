@@ -44,11 +44,22 @@
 
 .filmDetailContainer .filmDetail .filmInfo {
   width: 60%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 0 20px 0 20px;
+  padding: 20px;
+}
+
+.filmDetailContainer .filmDetail .filmInfo .watchBtn {
+  padding: 8px 10px;
+  background-color: #036541;
+  border-radius: 7px;
+  color: #ffff;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 .filmDetailContainer .filmDetail .imageWrapper img {
@@ -63,7 +74,7 @@
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 24px;
-} 
+}
 
 .filmDetailContainer .filmDetail p:not(:first-child) {
   margin-top: 10px;
@@ -72,4 +83,74 @@
 .filmDetailContainer .filmDetail .filmDescription {
   width: 80%;
   text-align: left;
+}
+
+.popupContainer {
+  width: 100%;
+  background-color: #18191ace;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.popupContainer .popup {
+  width: 50%;
+  margin: 0 auto;
+  padding: 0 40px;
+  margin-top: 20px;
+  height: 550px;
+  overflow: auto;
+  background-color: #242526;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  position: relative;
+  box-shadow: rgba(245, 244, 244, 0.35) 0px 5px 15px;
+}
+
+.popupContainer .popup .imageWrapper {
+  width: 50%;
+  margin-top: 40px;
+}
+
+.popupContainer .popup .imageWrapper img {
+  width: 200px;
+  height: 200px;
+  object-position: center;
+  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.popupContainer .popup .filmDetails {
+  padding: 10px;
+  text-align: center;
+}
+
+.popupContainer .popup .filmTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  color: #ffff;
+}
+
+.popupContainer .popup .btnWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+}
+
+.popupContainer .popup .btnWrapper .closeBtn {
+  padding: 8px 15px;
+  border-radius: 7px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  margin-top: 20px;
+  cursor: pointer !important;
 }
